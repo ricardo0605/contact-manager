@@ -10,15 +10,13 @@ import { ContactManagerAppComponent } from './contact-manager-app/contact-manage
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
-  { path: '', component: ContactManagerAppComponent, children: [
-    { path: '', component: MainContentComponent }
-  ]},
+  {
+    path: '', component: ContactManagerAppComponent, children: [
+      { path: '', component: MainContentComponent }
+    ]
+  },
   { path: '**', redirectTo: '' }
 ];
 
@@ -29,10 +27,6 @@ const routes: Routes = [
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatCardModule,
     RouterModule.forChild(routes)
   ]
 })

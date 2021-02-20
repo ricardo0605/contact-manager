@@ -14,5 +14,4 @@ export class ContactManagerAppComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
