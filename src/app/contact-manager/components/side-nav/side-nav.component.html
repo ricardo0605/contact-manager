@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav #sidenav [mode]="isSmallScreen ? 'over' : 'side'" [opened]="!isSmallScreen">
+        <mat-toolbar color="primary">
+            <span>Contacts</span>
+        </mat-toolbar>
+        <mat-list>
+            <mat-list-item>Item 1</mat-list-item>
+            <mat-list-item>Item 2</mat-list-item>
+            <mat-list-item>Item 3</mat-list-item>
+          </mat-list>
+    </mat-sidenav>
+    <div class="sidenav-content">
+        <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+        <div class="wrapper">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-sidenav-container>
