@@ -15,6 +15,8 @@ import { UserService } from './services/user.service';
 import { NotesComponent } from './components/notes/notes.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
   {
@@ -37,6 +39,8 @@ const routes: Routes = [
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule.forChild(routes)
   ],
   providers: [
