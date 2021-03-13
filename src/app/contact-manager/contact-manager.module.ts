@@ -13,6 +13,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { UserService } from './services/user.service';
 import { NotesComponent } from './components/notes/notes.component';
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    MatTableModule,
     RouterModule.forChild(routes)
   ],
   providers: [
