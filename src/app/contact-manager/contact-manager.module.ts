@@ -14,6 +14,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { UserService } from './services/user.service';
 import { NotesComponent } from './components/notes/notes.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
     FlexLayoutModule,
     FormsModule,
     MatTableModule,
+    MatPaginatorModule,
     RouterModule.forChild(routes)
   ],
   providers: [
