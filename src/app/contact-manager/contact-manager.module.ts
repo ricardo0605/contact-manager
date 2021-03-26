@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Routes } from '@angular/router';
+
 
 import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule} from '@angular/material/menu';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
 const routes: Routes = [
   {
@@ -32,7 +34,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactManagerAppComponent, ToolbarComponent, MainContentComponent, SideNavComponent, NotesComponent],
+  declarations: [ContactManagerAppComponent, ToolbarComponent, MainContentComponent, SideNavComponent, NotesComponent, NewContactDialogComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -49,6 +51,7 @@ const routes: Routes = [
   ],
   providers: [
     UserService
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ContactManagerModule { }

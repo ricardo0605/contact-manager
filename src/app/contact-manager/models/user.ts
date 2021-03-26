@@ -1,6 +1,6 @@
 import { Note } from "./note";
 
-export interface User {
+export class User {
     id: number;
     birthDate: Date;
     name: string;
